@@ -3,7 +3,7 @@ Summary(pl):	Aplikacja przygotowuj±ca rozk³ad korzystania z okienek X
 Vendor:		James Cameron
 Name:		gfocustimer
 Version:	0.5
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications
 Source0:	http://quozl.us.netrek.org/gfocustimer/%{name}-%{version}.tar.gz
