@@ -14,8 +14,6 @@ BuildRequires:	gtk+-devel
 URL:		http://quozl.us.netrek.org/gfocustimer/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 gfocustimer captures information about which windows you are spending
