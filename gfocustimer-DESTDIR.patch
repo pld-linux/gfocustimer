@@ -1,0 +1,17 @@
+--- gfocustimer-0.5/Makefile.am~	Thu Nov 15 03:14:11 2001
++++ gfocustimer-0.5/Makefile.am	Thu Nov 15 03:14:11 2001
+@@ -5,10 +5,10 @@
+ 
+ install-data-local:
+ 	test -d pixmaps \
+-	&& install -d -m 0755 $(pkgdatadir)/pixmaps \
+-	&& install -m 0644 pixmaps/* $(pkgdatadir)/pixmaps
+-	install -d -m 0755 $(mandir)/man1 \
+-	&& install -m 0644 gfocustimer.1 $(mandir)/man1
++	&& install -d -m 0755 $(DESTDIR)$(pkgdatadir)/pixmaps \
++	&& install -m 0644 pixmaps/* $(DESTDIR)$(pkgdatadir)/pixmaps
++	install -d -m 0755 $(DESTDIR)$(mandir)/man1 \
++	&& install -m 0644 gfocustimer.1 $(DESTDIR)$(mandir)/man1
+ 
+ dist-hook:
+ 	test -d pixmaps \
