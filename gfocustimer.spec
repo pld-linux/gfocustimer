@@ -2,15 +2,22 @@ Summary:	Prepare timesheet from X window usage
 Summary(pl):	Aplikacja przygotowuj±ca rozk³ad korzystania z okienek X
 Vendor:		James Cameron
 Name:		gfocustimer
-Version:	0.4
+Version:	0.5
 Release:	1
 License:	GPL
-Group:		Applications
-Group(de):	Applikationen
-Group(pl):	Aplikacje
+Group:		X11/Applications
+Group(de):	X11/Applikationen
+Group(pl):	X11/Aplikacje
 Source0:	http://quozl.us.netrek.org/gfocustimer/%{name}-%{version}.tar.gz
+Patch0:		%{name}-DESTDIR.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	gtk+-devel
 URL:		http://quozl.us.netrek.org/gfocustimer/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		_prefix		/usr/X11R6
+%define		_mandir		%{_prefix}/man
 
 %description
 gfocustimer captures information about which windows you are spending
@@ -33,22 +40,29 @@ zadaniami.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
-./configure --prefix=%{_prefix}
+rm -f missing
+aclocal
+autoconf
+automake -a -c
+%configure
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_bindir}/
-install src/gfocustimer $RPM_BUILD_ROOT%{_bindir}/
-install -d $RPM_BUILD_ROOT%{_mandir}/man1/
-install gfocustimer.1 $RPM_BUILD_ROOT%{_mandir}/man1/
+
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
+
+gzip -9nf AUTHORS ChangeLog NEWS README
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc *.gz
 %attr(755,root,root) %{_bindir}/gfocustimer
-%{_mandir}/man1/gfocustimer.1
+%{_mandir}/man1/gfocustimer.1*
