@@ -1,12 +1,14 @@
 Summary:	Prepare timesheet from X window usage
+Summary(pl):	Aplikacja przygotowuj±ca rozk³ad korzystania z okienek X
 Vendor:		James Cameron
 Name:		gfocustimer
 Version:	0.4
 Release:	1
 License:	GPL
-Group:		Applications/Productivity
-######		Unknown group!
-Source0:	gfocustimer-0.4.tar.gz
+Group:		Applications
+Group(de):	Applikationen
+Group(pl):	Aplikacje
+Source0:	http://quozl.us.netrek.org/gfocustimer/%{name}-%{version}.tar.gz
 URL:		http://quozl.us.netrek.org/gfocustimer/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -33,7 +35,6 @@ zadaniami.
 %setup -q
 
 %build
-pwd
 ./configure --prefix=%{_prefix}
 %{__make}
 
@@ -41,13 +42,13 @@ pwd
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}/
 install src/gfocustimer $RPM_BUILD_ROOT%{_bindir}/
-install -d $RPM_BUILD_ROOT%{_prefix}/man/man1/
-install gfocustimer.1 $RPM_BUILD_ROOT%{_prefix}/man/man1/
+install -d $RPM_BUILD_ROOT%{_mandir}/man1/
+install gfocustimer.1 $RPM_BUILD_ROOT%{_mandir}/man1/
+
+%clean
+rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/gfocustimer
-%{_prefix}/man/man1/gfocustimer.1
-
-%clean
-rm -rf $RPM_BUILD_ROOT
+%{_mandir}/man1/gfocustimer.1
