@@ -35,7 +35,7 @@ zadaniami.
 %build
 pwd
 ./configure --prefix=%{_prefix}
-make
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
