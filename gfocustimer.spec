@@ -20,6 +20,15 @@ can be used in a manual mode, where the user selects a new
 entry, or in a semi-automatic focus watching  mode,  where
 the user connects windows on screen to tasks.
 
+%description -l pl
+gfocustimer zbiera informacje o oknach, przy których spedza siê czas,
+by pomóc w przygotowaniu osobistego terminarza.
+gfocustimer wy¶wietla listê wykonanych zadañ, która sk³ada siê z
+nazwy oraz czasu spêdzonego przy danym zadaniu. Mo¿na go u¿yæ
+w trybie rêcznym, w którym u¿ytkownik wybiera nowe zadanie, lub 
+te¿ w pó³automatycznym trybie ogl±dania, kiedy u¿ytkownik ³±czy 
+okna wyswietlane na ekranie z zadaniami.
+
 %prep
 %setup -q
 
