@@ -7,6 +7,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://quozl.us.netrek.org/gfocustimer/%{name}-%{version}.tar.gz
+# Source0-md5:	3cccc94936aea479931c01f89a3bcd0b
 Patch0:		%{name}-DESTDIR.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
