@@ -7,7 +7,7 @@ License:	GPL
 Group:		Applications/Productivity
 Source:		gfocustimer-0.4.tar.gz
 URL:		http://quozl.us.netrek.org/gfocustimer/
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 gfocustimer  captures  information about which windows you
