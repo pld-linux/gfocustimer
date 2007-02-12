@@ -1,5 +1,5 @@
 Summary:	Prepare timesheet from X window usage
-Summary(pl):	Aplikacja przygotowuj±ca rozk³ad korzystania z okienek X
+Summary(pl.UTF-8):   Aplikacja przygotowujÄ…ca rozkÅ‚ad korzystania z okienek X
 Vendor:		James Cameron
 Name:		gfocustimer
 Version:	1.0
@@ -25,13 +25,13 @@ entry name and the time spent on the task. It can be used in a manual
 mode, where the user selects a new entry, or in a semi-automatic focus
 watching mode, where the user connects windows on screen to tasks.
 
-%description -l pl
-gfocustimer zbiera informacje o oknach, przy których spêdza siê czas,
-by pomóc w przygotowaniu osobistego terminarza. gfocustimer wy¶wietla
-listê wykonanych zadañ, która sk³ada siê z nazwy oraz czasu spêdzonego
-przy danym zadaniu. Mo¿na go u¿yæ w trybie rêcznym, w którym
-u¿ytkownik wybiera nowe zadanie, lub te¿ w pó³automatycznym trybie
-ogl±dania, kiedy u¿ytkownik ³±czy okna wy¶wietlane na ekranie z
+%description -l pl.UTF-8
+gfocustimer zbiera informacje o oknach, przy ktÃ³rych spÄ™dza siÄ™ czas,
+by pomÃ³c w przygotowaniu osobistego terminarza. gfocustimer wyÅ›wietla
+listÄ™ wykonanych zadaÅ„, ktÃ³ra skÅ‚ada siÄ™ z nazwy oraz czasu spÄ™dzonego
+przy danym zadaniu. MoÅ¼na go uÅ¼yÄ‡ w trybie rÄ™cznym, w ktÃ³rym
+uÅ¼ytkownik wybiera nowe zadanie, lub teÅ¼ w pÃ³Å‚automatycznym trybie
+oglÄ…dania, kiedy uÅ¼ytkownik Å‚Ä…czy okna wyÅ›wietlane na ekranie z
 zadaniami.
 
 %prep
