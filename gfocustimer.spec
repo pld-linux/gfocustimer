@@ -1,5 +1,5 @@
 Summary:	Prepare timesheet from X window usage
-Summary(pl.UTF-8):   Aplikacja przygotowująca rozkład korzystania z okienek X
+Summary(pl.UTF-8):	Aplikacja przygotowująca rozkład korzystania z okienek X
 Vendor:		James Cameron
 Name:		gfocustimer
 Version:	1.0
